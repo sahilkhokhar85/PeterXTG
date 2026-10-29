@@ -1,0 +1,12 @@
+[Unit]
+Description=X to Telegram bot
+After=network-online.target
+
+[Service]
+WorkingDirectory=/opt/x-telegram-bot
+ExecStart=/opt/x-telegram-bot/venv/bin/python bot.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
